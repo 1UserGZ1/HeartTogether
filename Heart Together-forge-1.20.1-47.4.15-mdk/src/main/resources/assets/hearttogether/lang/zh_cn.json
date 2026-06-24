@@ -1,0 +1,9 @@
+{
+  "heart.command.bind.success": "成功绑定 %s 和 %s。",
+  "heart.command.bind.same": "不能绑定玩家自身。",
+  "heart.command.bind.already": "其中一个玩家已绑定。",
+  "heart.command.unbind.success": "成功解绑 %s 和 %s。",
+  "heart.command.unbind.notbound": "这些玩家未绑定。",
+  "heart.command.list.empty": "无玩家绑定",
+  "heart.command.list.header": "==============绑定列表=============="
+}

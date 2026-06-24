@@ -1,0 +1,9 @@
+{
+  "heart.command.bind.success": "Successfully bound %s and %s.",
+  "heart.command.bind.same": "Cannot bind a player to himself.",
+  "heart.command.bind.already": "One of the players is already bound.",
+  "heart.command.unbind.success": "Successfully unbound %s and %s.",
+  "heart.command.unbind.notbound": "These players are not bound.",
+  "heart.command.list.empty": "No players are currently bound.",
+  "heart.command.list.header": "========== Binding List =========="
+}

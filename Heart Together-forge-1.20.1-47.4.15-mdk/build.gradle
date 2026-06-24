@@ -1,0 +1,56 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '[6.0,6.2)', changing: true
+    }
+}
+apply plugin: 'net.minecraftforge.gradle'
+
+group = 'com.dyxiaojiazi.hearttogether'   // 设置 group
+archivesBaseName = 'hearttogether'        // 设置 jar 文件名
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.mojang_level', 'debug'
+            mods {
+                hearttogether {
+                    source sourceSets.main
+                }
+            }
+        }
+        server {
+            workingDirectory project.file('run')
+            property 'forge.logging.mojang_level', 'debug'
+            mods {
+                hearttogether {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.15'
+}
+
+jar {
+    manifest {
+        attributes([
+                "Specification-Title": "hearttogether",
+                "Specification-Vendor": "DY_XiaoJiaZi",
+                "Specification-Version": "1.0.0",
+                "Implementation-Title": project.name,
+                "Implementation-Version": project.jar.archiveVersion,
+                "Implementation-Vendor": "DY_XiaoJiaZi"
+        ])
+    }
+}
